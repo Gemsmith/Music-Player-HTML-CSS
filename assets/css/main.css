@@ -1,0 +1,941 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+
+:root {
+    --bg-blue: hsl(231deg 53% 10%);
+    --less-blue: hsl(230deg 55% 16%);
+    --text-light-blue: hsl(208deg 12% 51%);
+    --text-light-blue: hsl(0deg 0% 69%);
+    --purple-blue: hsl(233deg 61% 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background: linear-gradient(257deg, #00257a, #000f73, #000615);
+    /* background: gray; */
+    background-size: 600% 600%;
+    background-attachment: fixed;
+    animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h3 {
+    font-weight: 600;
+}
+
+section {
+    margin: 4rem 0;
+}
+
+.overflow-hidden {
+    overflow-x: hidden;
+}
+
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/* ___________________________________________________ */
+/* NAVBAR */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+.navbar {
+    /* border: 3px solid teal; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 0rem;
+    color: white;
+}
+
+/* NAVBAR - Left */
+.navbar-left {
+    /* border: 3px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 330px;
+    max-width: 25%;
+    margin-left: 5vw;
+}
+
+.navbar-left-brand {
+    /* border: 3px solid blue; */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left-brand-img {
+    /* border: 3px solid cornflowerblue; */
+    width: 6.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left-brand-img img {
+    /* border: 3px solid cyan; */
+    width: 100%;
+}
+
+.navbar-left-brand-text p,
+h1 {
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+}
+
+.navbar-left-favorites {
+    font-size: 1.2rem;
+    padding-right: 1rem;
+}
+
+/* NAVBAR - Right */
+.navbar-right {
+    /* border: 3px solid red; */
+    margin-right: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 36rem;
+}
+
+.navbar-right-search {
+    width: 66%;
+}
+
+.navbar-right-search #nav-search {
+    background-color: var(--less-blue);
+    border: none;
+    border-radius: 0.6rem;
+    width: 100%;
+    height: 2.4rem;
+    outline: none;
+}
+
+.navbar-right-search #nav-search::placeholder {
+    padding-left: 2.1rem;
+}
+
+.navbar-right-notification-icon {
+    width: 75px;
+}
+
+.navbar-right-notification-icon img {
+    width: 100%;
+}
+
+.navbar-right-avatar {
+    width: 3.6rem;
+    min-width: 3.6rem;
+}
+
+.navbar-right-avatar img {
+    width: 100%;
+    border-radius: 10rem;
+}
+
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/* ___________________________________________________ */
+/* MAIN CONTENT */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+}
+
+/* ___________________________________________________ */
+/* MAIN - LEFT */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+main .main-left {
+    /* border: 3px solid green; */
+    margin-left: 6vw;
+    width: 100%;
+    max-width: 55rem;
+    display: inline-block;
+}
+
+/* MAIN - LEFT - Hero Section */
+.main-left-hero_section {
+    /* border: 3px solid orange; */
+    position: relative;
+}
+
+.main-left-hero_section .hero-image-1 {
+    /* border: 3px solid cyan; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/hero7.png) no-repeat left/ 54%,
+        url(../img/hero6.png) no-repeat right / 54%;
+
+
+}
+
+.main-left-hero_section .hero-image-1 img {
+    width: 66%;
+    /* min-width to make sure hero doesn't get too small when vw is decreased. */
+    min-width: 24rem;
+    transition: all 0.24s ease-in-out;
+}
+
+.main-left-hero_section .hero-image-1 .hero-blur-bg-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.main-left-hero_section .hero-image-1 .hero-blur-bg-container img {
+    height: 110%;
+    filter: blur(6px);
+    /* This is inserted to keep the look of the blurred edges sharp. Otherwise the blur filter blurs the bg image very well but also blurs the edges. So we clip the edges.   */
+    clip-path: inset(0px);
+}
+
+/* ___________________________________________________ */
+/* MAIN RIGHT - Sidebar */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+/* I created this outer div (.hover-and-main-right) so that the I have a div that contains hover button and whole sidebar inside it, so that I can hide the sidebar but keep the hover button visible, and then when I hover on the button, it changes the display of the sidebar to block, so the site can be made responsive while keeping sidebar accessible .*/
+.hover-and-main-right {
+    margin: 0rem 6vw 0rem 0rem;
+}
+
+/* Side Pop-Out Menu at Responsive Width */
+/* At responsive width, sidebar turns into a Pop-out sidebar  */
+.side-pop-out-menu {
+    display: none;
+    position: absolute;
+    top: 15vh;
+    right: 3vw;
+    transform: rotate(180deg);
+    z-index: 100;
+}
+
+.side-pop-out-menu .more-button a svg {
+    height: 30px;
+    fill: white;
+}
+
+/* This is the actual sidebar content */
+main .main-right {
+    /* border: 3px solid white; */
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    min-width: 300px;
+    max-width: 400px;
+    color: white;
+    display: inline-block;
+}
+
+/* This hides the scroll-bar, and the sidebar looks so much nicer */
+.main-right::-webkit-scrollbar {
+    display: none;
+}
+/* MAIN RIGHT - Sidebar */
+.sidebar {
+    /* This is so that it's child elements, i.e. each card could have a :before element (for hover effect). I'll be positioning them absolute so need this to be relatively positioned.  */
+    position: relative;
+}
+
+/* MAIN RIGHT - Sidebar Heading */
+.sidebar-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0rem 4rem 2rem;
+}
+
+.sidebar-heading-right {
+    color: turquoise;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.sidebar-heading-right svg {
+    transform: scale(0.2);
+    padding-left: 2rem;
+    overflow: visible;
+    fill: turquoise;
+}
+
+/* MAIN RIGHT - Sidebar "Queue" Text's Dropdown Menu */
+.drop-down-menu2 {
+    width: fit-content;
+    border-radius: 0.3rem;
+    background-color: white;
+    color: gray;
+    visibility: hidden;
+    position: absolute;
+    top: 3rem;
+    left: 7vw;
+    z-index: 100;
+}
+
+.drop-down-menu2-breaker {
+    height: 2px;
+    margin: 0 1rem;
+    background: lightgray;
+}
+
+.drop-down-menu2-items {
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.drop-down-menu2-items span {
+    padding: 0rem 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+/* MAIN RIGHT - Sidebar Queue-List */
+.sidebar-container {
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1.5rem 10%;
+    transition: all 0.24s ease-in-out;
+}
+
+.sidebar-container-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Each Song's Serial Number */
+.s-no {
+    font-size: 0.8rem;
+    font-weight: 300;
+    width: 30px;
+    text-align: center;
+    color: lightsteelblue;
+}
+
+/* Play button SVG on the second song */
+.s-no svg {
+    width: 24px;
+}
+
+/* Song's Album Art */
+.sidebar-image img {
+    display: block;
+    height: 48px;
+    border-radius: 0.21rem;
+    box-shadow: 0px 4px 20px -6px white;
+    margin: 0.3rem 1rem 0.3rem 0.5rem;
+    transition: all 0.24s ease-in-out;
+}
+
+/* Song's Text Content */
+.sidebar-song-info {
+    display: grid;
+    width: 8vw;
+}
+
+.sidebar-song-info h5 {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-song-info p {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: lightsteelblue;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Song's Heart SVG */
+.sidebar-container-right svg {
+    margin: 0 20px 0 10px;
+    min-width: 21px;
+    max-width: 21px;
+    fill: white;
+}
+
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/* ___________________________________________________ */
+/* LATEST SONGS SECTION */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+/* Container - All Cards */
+.new-songs-container-content {
+    /* border: 3px solid green; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    /* margin: 0 10vw 0 0; */
+}
+
+/* Each Song Card */
+.new-songs-card {
+    /* border: 3px solid red; */
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0.75rem 0;
+
+    /* This is done to make it so that I could apply pseudo classes to its child class. And so I applied a :before (then made that :before absolute, resized to enclose the inner card and positioned appropriately) and applied :hover to make the card look nice  */
+    position: relative;
+}
+
+.new-songs-card-left {
+    /* border: 3px solid yellow; */
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    transition: all 0.24s ease-in-out;
+}
+
+.new-songs-card-left-img {
+    position: relative;
+    border-radius: 0.24rem;
+    display: flex;
+    box-shadow: 0 5px 10px 3px rgb(0 0 0 / 70%);
+    transition: all 0.24s ease-in-out;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    /* box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12); */
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+}
+
+/* minimum dimensions given to make the images responsive and also not be too small as well on small widths */
+.new-songs-card-left-img img {
+    height: 6vw;
+    width: 6vw;
+    min-height: 60px;
+    min-width: 60px;
+    border-radius: 0.24rem;
+    transition: all 0.24s ease-in-out;
+}
+
+/* Play button SVG on the Card's right */
+.new-songs-card-left svg {
+    visibility: hidden;
+    width: 45px;
+    fill: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Card's Text Style */
+.new-songs-card-left .new-songs-card-left-content > * {
+    margin: 0 1rem 0.45rem 1rem;
+    max-width: 7rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.new-songs-card-left .new-songs-card-left-content h4 {
+    font-weight: 600;
+}
+
+.new-songs-card-left .new-songs-card-left-content p {
+    color: var(--text-light-blue);
+}
+
+/* Styling for 3 dots and Song Length */
+.new-songs-card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.3rem 0.5rem 0 0;
+}
+
+.new-songs-card-right svg {
+    fill: var(--text-light-blue);
+    width: 18px;
+}
+
+.new-songs-card-right p {
+    color: var(--text-light-blue);
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+/* Drop-Down Menu - Applied on 1 card only */
+.drop-down-menu {
+    border-radius: 0.3rem;
+    background-color: white;
+    color: gray;
+    position: absolute;
+    top: 1.5rem;
+    right: 0rem;
+    z-index: 100;
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+    transition: all 0.24s ease-in-out;
+}
+
+.drop-down-menu-items {
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.drop-down-menu-items svg {
+    width: 24px;
+}
+
+.drop-down-menu-items span {
+    padding: 0rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/* ___________________________________________________ */
+/* POPULAR ARTISTS */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+/* Container - All Artists */
+.artists .artists-container {
+    /* border: 3px solid red; */
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.artists .artists-container img {
+    display: block;
+    height: 132px;
+    border-radius: 5rem;
+    transition: all 0.24s ease-in-out;
+}
+
+.artists .artists-container p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Artist Image + SVG */
+.artists-container-imgsvg {
+    /* border: 3px solid red; */
+    position: relative;
+    border-radius: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.24s ease-in-out;
+}
+
+/* Play button SVG on the circle */
+.artists-container-imgsvg svg {
+    visibility: hidden;
+    width: 45px;
+    fill: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+}
+
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/* ___________________________________________________ */
+/* STATIONS */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+.stations {
+    background-color: var(--purple-blue);
+}
+
+/* Container - All Stations */
+.stations-container {
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: 0.8rem;
+}
+
+/* 1st Image - "Station" image  */
+.stations-container #stations-img {
+    height: 114px;
+    margin-right: 1rem;
+}
+
+/* Cicrular Stations */
+.stations-container .stations-item {
+    position: relative;
+}
+
+.stations-container .stations-item img {
+    height: 90px;
+    border-radius: 5rem;
+    filter: contrast(0.45) saturate(1.8);
+    transition: all 0.24s ease-in-out;
+}
+
+.stations-container .stations-item p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 0.84rem;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+}
+
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/* ___________________________________________________ */
+/* 3 BANNERS */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+/* Container - All 3 banners */
+.three-banners-container {
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+/* Each Banner Card */
+.three-banners-banner {
+    /* border: 3px solid yellow; */
+    width: 33%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.three-banners-banner p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 1px 1px 0.9rem white;
+}
+
+.three-banners-banner img {
+    width: 100%;
+    transform: scale(1);
+    transition: all 0.24s ease-in-out;
+}
+
+/* This is styling for that tiniest gif image that we've used as an overlay */
+.three-banners-banner #img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.45;
+    height: 100%;
+    background-size: contain;
+    transition: all 0.24s ease-in-out;
+}
+
+.banner-bg1 #img2 {
+    background: orange;
+}
+
+.banner-bg2 #img2 {
+    background: DodgerBlue;
+}
+
+.banner-bg3 #img2 {
+    background: violet;
+}
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/* ___________________________________________________ */
+/* LATEST ENGLISH-HINDI */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+/* Container - All Songs */
+.song-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Each Song Card */
+.song-container .song {
+    margin: 1rem 0.5vw 0 0;
+    position: relative;
+}
+
+.song-container .song .song-imgsvg {
+    position: relative;
+}
+
+.song-container .song p {
+    color: var(--text-light-blue);
+    font-size: 0.7rem;
+    margin: 0.3rem 0 0 0;
+}
+
+.song-container .song img {
+    display: block;
+    border-radius: 0.21rem;
+    width: 8.4rem;
+    transition: all 0.24s ease-in-out;
+}
+
+.song-container .song h6 {
+    margin: 1rem 0 0 0;
+    font-weight: 500;
+}
+
+.song-container .song .song-imgsvg svg {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    fill: white;
+}
+
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+
+/* FOOTER */
+footer {
+    margin-bottom: 6rem;
+    z-index: 10000;
+}
+
+footer .footer-container {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(0deg 0% 16%);
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* FOOTER LEFT */
+.footer-container .footer-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 9vw;
+}
+
+/* Footer Left - AlbumArt */
+.footer-container .footer-left img {
+    width: 60px;
+}
+
+/* Footer Left - Song Name + 2 SVG's */
+.footer-container .footer-left-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    color: white;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.footer-container .footer-left-content-top p {
+    padding: 0 1.2rem 0 0.75rem;
+}
+
+.footer-container .footer-left-content-top-svg svg {
+    transform: scale(0.75);
+    white-space: nowrap;
+}
+
+/* Footer Left - Artist Name */
+.footer-container .footer-left-content-bottom {
+    color: var(--text-light-blue);
+    font-size: 0.7rem;
+    padding: 0.1rem 1.2rem 0 0.75rem;
+}
+
+/* FOOTER MIDDLE */
+.footer-container .footer-middle {
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Footer Middle - Each SVG in the Player Controls */
+.footer-container .footer-middle svg {
+    /* border: 2px solid orange; */
+    height: 30px;
+    padding: 0 1vw;
+    fill: var(--text-light-blue);
+}
+
+/* Footer Middle - Seekbar */
+.footer-middle-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Footer Middle - Time Stamp Styling */
+.footer-middle-bottom span {
+    padding: 0 1rem;
+    font-size: 0.75rem;
+    color: var(--text-light-blue);
+}
+
+/* Footer Middle - Seekbar - Total Song Length */
+.grayline {
+    height: 4px;
+    width: 30vw;
+    background-color: hsl(0deg 0% 27%);
+    border-radius: 1rem;
+}
+
+/* Footer Middle - Seekbar - Played Song Lenght */
+.greenline {
+    height: 4px;
+    width: 10vw;
+
+    background: linear-gradient(hsl(142deg 76% 48%), hsl(150deg 89% 72%));
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Footer Middle - Seekbar - Seeker */
+.circle {
+    border-radius: 50rem;
+    height: 14px;
+    width: 14px;
+    background-color: white;
+    border-radius: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    transform: translateY(-50%);
+}
+
+/* FOOTER RIGHT */
+.footer-right {
+    margin-right: 9vw;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* Styling for 4 SVG's in Footer Right */
+.footer-container .footer-right svg {
+    height: 33px;
+    padding: 0 0.3rem;
+    transform: scale(0.6);
+    fill: var(--text-light-blue);
+}
+
+/* Re-used classes from "Footer Middle" with little bit customization */
+.footer-right-seekbar {
+    position: relative;
+}
+
+.footer-right-seekbar .grayline {
+    width: 6vw;
+    background-color: hsl(0deg 0% 70%);
+}
+
+.footer-right-seekbar .greenline {
+    width: 3vw;
+    background: linear-gradient(hsl(102deg 60% 37%), hsl(75deg 100% 66%));
+}

@@ -1,0 +1,173 @@
+@media screen and (max-width: 1280px) {
+    .hero-content .hero-content-heading {
+        color: turquoise;
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+    }
+
+    .hero-content-heading span {
+        margin: 0.5rem 0 0.75rem 1rem;
+        color: cornflowerblue;
+    }
+
+    .hero-content-heading h5 {
+        color: cornflowerblue;
+    }
+
+    .hero-content p {
+        max-height: 184px;
+        overflow: scroll;
+        text-overflow: ellipsis;
+    }
+
+    .hero-content p::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Made the footer's song-name hidden */
+    .footer-left-content-top p,
+    .footer-left-content-bottom {
+        display: none;
+    }
+
+    .footer-left-content-top-svg {
+        margin-left: 2vw;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    /* This will contain Artist's description in the background and prevent overflow */
+    .hero-content p {
+        max-height: 144px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-content p {
+        display: none;
+    }
+
+    .hero-content .hero-buttons {
+        display: none;
+    }
+
+    .main-left-hero_section .hero-container {
+        background: transparent;
+        height: fit-content;
+    }
+
+    .hero-container img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .side-pop-out-menu {
+        display: block;
+    }
+
+    /* Hiding the left part and making it absolute so we can present it wherever we like */
+    main .main-right {
+        display: none;
+        position: absolute;
+        top: 18vh;
+        right: 0vw;
+        width: 100%;
+        min-width: 200px;
+        max-width: 330px;
+        padding-right: 2rem;
+        border-radius: 0.6rem;
+
+        color: white;
+        backdrop-filter: blur(10px);
+        /* background-color: rgba(0, 60, 198, 0.84); */
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    .hover-and-main-right:hover .main-right {
+        display: block;
+    }
+
+    /* Song info becomes too small wrt. container size if this is not set */
+    /* .sidebar-song-info {
+        display: grid;
+        width: 120px;
+    } */
+
+    .footer-right-seekbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    /* Redifining Footer Margins */
+    .footer-container .footer-left {
+        margin-left: 4.5vw;
+    }
+
+    .footer-container .footer-right {
+        margin-right: 4.5vw;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    main .main-right {
+        display: none;
+    }
+
+    main .main-left {
+        margin-right: 6vw;
+        padding: 0 9vw;
+    }
+
+    .main-left-hero_section .hero-container {
+        background-color: var(--less-blue);
+        width: 100%;
+        margin-right: 6vw;
+    }
+
+    .hero-content .hero-content-heading {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-container img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .hero-content p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navbar-right-search {
+        margin-right: 1rem;
+    }
+
+    .navbar-left-favorites,
+    .navbar-right-notification-icon {
+        display: none;
+    }
+
+    /* When we reach this viewport width, without this styling. In the "Long Cards" the songs' alignment becomes messed up as elements start to push each other, so we set this width for the text, and then the text always stays somewhat smaller than available width. */
+    .sidebar-song-info-CUSTOM {
+        width: 24vw;
+    }
+
+    .footer-left-content-top-svg {
+        display: none;
+    }
+
+    #footer-right-3,
+    #footer-right-4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-right-search {
+        width: 0%;
+    }
+}

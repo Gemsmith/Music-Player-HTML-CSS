@@ -1,0 +1,155 @@
+@media screen and (max-width: 1200px) {
+    main .main-left {
+        /* border: 3px solid blue; */
+        position: absolute;
+        top: 18vh;
+        left: 6vw;
+        margin-left: 0px;
+        width: 60%;
+    }
+
+    main .main-right {
+        /* border: 3px solid white; */
+        position: absolute;
+        top: 18vh;
+        right: 6vw;
+        width: 27%;
+        min-width: 150px;
+        max-width: 300px;
+        margin: 0rem 0px 0 0;
+        border-radius: 0.6rem;
+    }
+
+    /* Reducing columns as per viewport width  */
+    .new-songs-container-content {
+        /* border: 3px solid green; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3rem;
+    }
+
+    /* Hiding some elements on responsive layouts */
+    .footer-left-content-top p,
+    .footer-left-content-bottom {
+        display: none;
+    }
+
+    /* Gave a margin in this vw to Heart SVG in the Footer Left to make it look nicer*/
+    .footer-left-content-top-svg {
+        margin-left: 2vw;
+    }
+
+    .extra-bottom-margin {
+        margin-bottom: 18vh;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    main .main-right {
+        /* border: 3px solid white; */
+        position: absolute;
+        top: 18vh;
+        right: 6vw;
+    }
+
+    .footer-right-seekbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    main .main-left {
+        /* border: 3px solid blue; */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        min-width: 10vw;
+        max-width: 84vw;
+    }
+
+    main .main-right {
+        display: none;
+        position: absolute;
+        top: 18vh;
+        right: 0vw;
+        margin: 0rem 0vw 0 0;
+        width: 100%;
+        min-width: 200px;
+        max-width: 330px;
+        color: white;
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    /* At this vw we're hiding the sidebar and putting a hover button to make it appear again*/
+    .side-pop-out-menu {
+        display: block;
+    }
+
+    /* This will make the sidebar appear again, when we hove rover the hover button */
+    .hover-and-main-right:hover .main-right {
+        display: block;
+    }
+
+    /* Song info in sidebar "Queue" songs becomes too small even if container is large, if this is not set */
+    .sidebar-song-info {
+        display: grid;
+        width: 140px;
+    }
+
+    /* Some rearrangements to make things look nicer at this VW */
+    .sidebar-heading {
+        padding: 1.5rem 2vw 2.4rem 2vw;
+    }
+
+    .sidebar-container {
+        margin: 0rem 2vw 2rem 2vw;
+    }
+
+    .footer-container .footer-left {
+        margin-left: 4.5vw;
+    }
+
+    .footer-container .footer-right {
+        margin-right: 4.5vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* Navbar was too close to the Avatar */
+    .navbar-right-search {
+        margin-right: 1rem;
+    }
+
+    /* Made the Favorites and notification icon hidden */
+    .navbar-left-favorites,
+    .navbar-right-notification-icon {
+        display: none;
+    }
+
+    /* Latest Song releases Section made to have just 1 column */
+    .new-songs-container-content {
+        /* border: 3px solid green; */
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 3rem;
+    }
+
+    /* Footer's SVG's next to albumart hidden */
+    .footer-left-content-top-svg {
+        display: none;
+    }
+
+    /* Made Footer's SVG's in the right hidden as well */
+    #footer-right-3,
+    #footer-right-4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    /* Search is also hidden in the navbar */
+    .navbar-right-search {
+        width: 0%;
+    }
+}

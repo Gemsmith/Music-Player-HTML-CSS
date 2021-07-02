@@ -1,0 +1,221 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    margin: 2rem 0;
+}
+
+h1 {
+    letter-spacing: 0rem;
+}
+
+.playlist-bg {
+    border-radius: 0.21rem;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* ___________________________________________________ */
+/* MAIN CONTENT */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+/* ___________________________________________________ */
+/* MAIN - Left */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+/* MAIN - HERO SECTION */
+.main-left-hero_section .hero-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 30vw;
+    min-height: 270px;
+    background-color: var(--less-blue);
+}
+
+.hero-container img {
+    height: 30vw;
+    min-height: 270px;
+    align-self: flex-start;
+    border-radius: 0.21rem;
+}
+
+.hero-container .hero-content {
+    margin: 0 2rem;
+}
+
+.hero-content .hero-content-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-content-heading span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.75rem 0;
+    color: var(--text-light-blue);
+}
+
+.hero-content-heading h5 {
+    font-weight: 500;
+    margin: 0.5rem 0 0.75rem 0;
+    color: var(--text-light-blue);
+}
+
+.hero-content p {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin: 0.5rem 0 0 0;
+    color: var(--text-light-blue);
+}
+
+.hero-content .hero-buttons button {
+    width: 7vw;
+    font-size: 0.84rem;
+    font-weight: 400;
+    padding: 0.66rem;
+    margin: 3vh 0 0 0;
+    color: white;
+    border: none;
+    background: linear-gradient(
+        90deg,
+        hsl(247deg 66% 41%),
+        hsl(288deg 70% 58%)
+    );
+}
+
+.hero-content .hero-buttons #hero-follow-btn {
+    background: transparent;
+}
+
+/* Plus SVG icon in Long cards below HERO Section*/
+#plus-svg {
+    margin: 0 2rem 0 1.5rem;
+}
+
+/* ___________________________________________________ */
+/* MAIN - Right */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+.hover-and-main-right {
+    margin: 0rem 6vw 0rem 0rem;
+}
+
+main .main-right {
+    padding-left: 2rem;
+}
+
+.main-right::-webkit-scrollbar {
+    display: none;
+}
+
+/* Code for sidebar turned to pop-out sidebar  */
+.side-pop-out-menu {
+    display: none;
+    position: absolute;
+    top: 15vh;
+    right: 3vw;
+    transform: rotate(180deg);
+    z-index: 100;
+}
+
+.side-pop-out-menu .more-button a svg {
+    height: 30px;
+    fill: white;
+}
+
+/* Below stylings apply to both "Similar Artists" and "Recently Played" sections' HEADINGS */
+/* Sidebar Heading */
+.sidebar-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0rem 0rem 0rem;
+    margin: 0 0 2.4rem 0;
+}
+
+.sidebar-heading-right {
+    color: turquoise;
+    font-size: 0.8rem;
+}
+
+.sidebar-heading-right svg {
+    transform: scale(0.2);
+    padding-left: 2rem;
+    overflow: visible;
+    fill: turquoise;
+}
+
+/* Sidebar Songs-List */
+/* This styling applies to not just the "left part content" but also to the "Long Cards" i.e. the Playlist below the HERO section */
+.sidebar-container {
+    /* border: 3px solid red; */
+    padding: 10px 10px 10px 0;
+    margin: 0.6rem 0;
+}
+
+/* These are little customizations to the SVG's in the right to make them look nicer */
+.sidebar-container-right {
+    /* border: 3px solid red; */
+    display: flex;
+    align-items: center;
+}
+
+/* Heart SVG in the Recents in the Sidebar */
+.sidebar-container-right svg {
+    margin: 0 0px 0 10px;
+}
+
+/* This width is necessary so the song name doesn't push the hear svg out of view */
+.sidebar-song-info {
+    width: 9vw;
+}
+
+/* To make the Long Cards display the Song Names well at all vw's */
+/* This class has been added to long cards only */
+.sidebar-song-info-CUSTOM {
+    width: auto;
+}
+
+/* ___________________________________________________ */
+/* SIMILAR ARTISTS SECTION */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+.new-songs-container-content {
+    display: block;
+    margin-bottom: 4.5rem;
+}
+
+.new-songs-card {
+    /* border: 3px solid red; */
+    margin: 1rem 0;
+}
+
+.new-songs-card-left img {
+    height: 7vw;
+    min-height: 60px;
+    width: 7vw;
+    min-width: 60px;
+    border-radius: 0.24rem;
+}
+
+.new-songs-card-left-content {
+    margin: 0 1rem 0.45rem 0rem;
+}
+
+.new-songs-card-right {
+    /* In the "playlist" page, this padding is added because the right part is too close to the edge and on hover the effect looks messy, if padding is not there. */
+    padding-right: 0.5rem;
+}
+
+.new-songs-card-right svg {
+    fill: var(--text-light-blue);
+    width: 15px;
+}
+
+.new-songs-card-right p {
+    color: var(--text-light-blue);
+    font-weight: 400;
+    font-size: 0.75rem;
+}
